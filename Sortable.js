@@ -87,7 +87,7 @@
 			disabled: false,
 			store: null,
 			handle: null,
-			draggable: el.children[0] && el.children[0].nodeName || (/[uo]l/i.test(el.nodeName) ? 'li' : '*'),
+			draggable: el.children[0] && el.children[0].nodeName && el.children[0].nodeName !== 'TEMPLATE' || (/[uo]l/i.test(el.nodeName) ? 'li' : '*'),
 			ghostClass: 'sortable-ghost',
 			ignore: 'a, img',
 			filter: null,
